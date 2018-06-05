@@ -1,0 +1,45 @@
+/* pages/searchRank/searchRank.wxss */
+.search {
+  position: relative;
+  background: #f3f3f3;
+  padding: 30rpx 0;
+}
+
+.search input {
+  width: 690rpx;
+  height: 70rpx;
+  background: #fff;
+  border-radius: 14rpx;
+  margin: 0rpx auto;
+}
+
+.search image {
+  position: absolute;
+  right: 54rpx;
+  width: 30rpx;
+  height: 30rpx;
+  top: 51rpx;
+  z-index: 9;
+}
+
+.rank{
+  position: relative;
+  padding: 48rpx 24rpx 0;
+  height: 494rpx;
+}
+text{
+  position: absolute;
+}
+.title{
+  top: 230rpx;
+  text-align:center;
+width:700rpx;
+
+}
+.num{
+  position:absolute;
+top:281rpx;
+text-align:center;
+width:700rpx;
+
+}

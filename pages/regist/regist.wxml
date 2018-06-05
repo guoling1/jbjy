@@ -1,0 +1,20 @@
+<!--pages/regist/regist.wxml-->
+<form class='form' bindsubmit='formSubmit'>
+  <view class='list'>
+    <text>联系人</text>
+    <input placeholder='请输入联系人' name="name" value='{{name}}'></input>
+  </view>
+  <view class='list'>
+    <text>联系电话</text>
+    <input placeholder='请输入联系方式' type='number' name="phone" value='{{phone}}'></input>
+  </view>
+  <view class='list'>
+    <text>身份证号</text>
+    <input placeholder='请输入身份证号' type='idcard' name="idCard" value='{{idCard}}'></input>
+  </view>
+  <view class='list'>
+    <text>所在学校</text>
+    <input placeholder='请输入所在学校' name="school" value='{{school}}'></input>
+  </view>
+  <button form-type='submit' type="primary" bindtap='submit'>确认</button>
+</form>

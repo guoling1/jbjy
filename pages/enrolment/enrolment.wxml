@@ -1,0 +1,34 @@
+<!--pages/enrolment/enrolment.wxml-->
+<view class='head'>
+  <image src='../image/enrolment.png'></image>
+  <view class='title'>自主招生
+    <text>/ Autonomous enrolment</text>
+  </view>
+</view>
+<view class='content'>
+  <view class='title'>
+    <view class='{{selected==0?"active":""}}' bindtap='changeTab' data-num='0'>自主招生介绍
+      <text></text>
+    </view>
+    <view class='{{selected==1?"active":""}}' bindtap='changeTab' data-num='1'>自主招生好处
+      <text></text>
+    </view>
+    <view class='{{selected==2?"active":""}}' bindtap='changeTab' data-num='2'>自主招生条件
+      <text></text>
+    </view>
+  </view>
+  <view class='{{selected==0?"des":"des none"}}'>
+    <text>自主招生又称自主选拔，是高校选拔录取工作改革的重要环节。即指高校不再单一参考高考成绩，而是通过自主测试，并结合考生高考成绩和平时表现，最终录取考生的一种招生方式，是对现行统一高考招生按分数录取的一种补充。</text>
+  </view>
+  <view class='{{selected==1?"des":"des none"}}'>
+    <text>1 . 低分上名校，最高一本线直录。</text>
+    <text>2 . 多数是大类招生，有优选专业的机会。</text>
+    <text>3 . 属于提前批志志愿里，多一次选择的机会。</text>
+    <text>4 . 预防高考发挥失常，双重保险！</text>
+  </view>
+  <view class='{{selected==2?"des":"des none"}}'>
+    <text>越早准备越好，最好是高一开学就结合自己的情况制定策略</text>
+    <text>对于现在高一，高二的考生来说可以从学科竞赛，科技创新，英语作文，专利论文等很多方面准备都来得及。</text>
+    <text>对于高三考生只有为数不多的机会和时间来准备资质了。</text>
+  </view>
+</view>

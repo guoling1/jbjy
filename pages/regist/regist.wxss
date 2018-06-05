@@ -1,0 +1,28 @@
+/* pages/regist/regist.wxss */
+page{
+  background: #f9f9fa;
+}
+.form{
+  font-size: 28rpx;
+}
+.form .list{
+  height: 86rpx;
+  line-height: 86rpx;
+  background: #fff;
+  margin-bottom: 2rpx;
+  padding-left: 20rpx;
+}
+.list text{
+  width: 208rpx;
+  display: inline-block;
+  float: left;
+}
+.list input{
+  display: inline-block;
+  height: 86rpx;
+  line-height: 86rpx;
+  overflow: normal;
+}
+button{
+  margin: 142rpx 30rpx 0;
+}

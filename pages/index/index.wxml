@@ -1,0 +1,93 @@
+<!--index.wxml-->
+<view class="container">
+  <view class="page-section page-section-spacing swiper">
+      <swiper autoplay="{{autoplay}}" interval="{{interval}}" duration="{{duration}}" style='height:100%'>
+        <block wx:for="{{swiperData}}" wx:key="*this">
+          <swiper-item>
+            <view class="swiper-item {{item}}">
+               <image src='{{item}}'></image> 
+            </view>
+          </swiper-item>
+        </block>
+      </swiper>
+  </view>
+  <view class='swiperTitle'>夯实基础 扩展拔高-
+    <text>备战中考冲击中考高分</text>
+  </view>
+  <view class='nav'>
+    <navigator url='/pages/about/about' class='navItem'>
+      <image src='../image/nav1.png'></image>
+      <text>关于我们</text>
+    </navigator>
+    <navigator url='/pages/enrolment/enrolment' class='navItem'>
+      <image src='../image/nav2.png'></image>
+      <text>自主招生</text>
+    </navigator>
+    <navigator url='/pages/knowledge/knowledge' class='navItem'>
+      <image src='../image/nav3.png'></image>
+      <text>专利知识</text>
+    </navigator>
+    <navigator url='/pages/school/school' class='navItem'>
+      <image src='../image/nav4.png'></image>
+      <text>自招学校</text>
+    </navigator>
+    <navigator url='/pages/cases/cases' class='navItem'>
+      <image src='../image/nav5.png'></image>
+      <text>成功案例</text>
+    </navigator>
+    <navigator url='/pages/searchSchool/searchSchool' class='navItem'>
+      <image src='../image/nav6.png'></image>
+      <text>学校查询</text>
+    </navigator>
+    <navigator url='/pages/methods/methods' class='navItem'>
+      <image src='../image/nav7.png'></image>
+      <text>创新方法</text>
+    </navigator>
+    <navigator url='/pages/searchRank/searchRank' class='navItem'>
+      <image src='../image/nav8.png'></image>
+      <text>查询排名</text>
+    </navigator>
+  </view>
+  <view class='content'>
+    <view class='item'>
+      <text class='title'>金榜教育最新招生简章</text>
+      <view>
+        <image src='../image/content.png'></image>
+        <view class='right'>
+          <text class='des'>金榜教育是2001年原八中党委书记、校长于怀明教授创办，经潍城区教育局、民政局批准注册的正规机……</text>
+          <view class='bottom'>
+            <image src='../image/contenticon.png'></image>
+          <text>资讯</text>
+          <text>关于我们</text>
+          </view>
+          
+        </view>
+        
+      </view>
+    </view>
+     <view >
+      <text class='title'>金榜教育最新招生简章</text>
+      <view>
+        <image src='../image/content.png'></image>
+        <view class='right'>
+          <text class='des'>金榜教育是2001年原八中党委书记、校长于怀明教授创办，经潍城区教育局、民政局批准注册的正规机……</text>
+          <view class='bottom'>
+            <image src='../image/contenticon.png'></image>
+          <text>资讯</text>
+          <text>关于我们</text>
+          </view>
+          
+        </view>
+        
+      </view>
+    </view>
+  </view>
+  <view class='footer'>
+    <navigator url='/pages/regist/regist'>实名注册</navigator>
+    <navigator url='/pages/contact/contact'>联系我们</navigator>
+    
+  </view>
+</view>
+
+
+

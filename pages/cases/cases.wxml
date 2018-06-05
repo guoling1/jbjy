@@ -1,0 +1,19 @@
+<!--pages/cases/cases.wxml-->
+<view class='head'>
+<image src='../image/cases.png'></image>
+<view class='title'>成功案例 <text>/ Successful cases</text></view>
+</view>
+ <view class='table'>
+  <view class='table-hd'>
+    <view class='hd-item' style='width:100rpx;flex:none;'>姓名</view>
+    <view class='hd-item' style='width:243rpx;flex:none;'>身份证号</view>
+    <view class='hd-item'>备注</view>
+    <view class='hd-item'>学校</view>
+  </view>
+  <view class='table-row'>
+    <view class='table-col' style='width:100rpx;flex:none;'>吴作良</view>
+    <view class='table-col' style='width:243rpx;flex:none;'>130406199006060XXX</view>
+    <view class='table-col'>授权4.27</view>
+    <view class='table-col'>河海大学</view>
+  </view>
+</view>

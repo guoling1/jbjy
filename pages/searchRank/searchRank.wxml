@@ -1,0 +1,10 @@
+<!--pages/searchRank/searchRank.wxml-->
+<view class='search'>
+  <input class=''></input>
+  <image src='../image/search.png'></image>
+</view>
+<view class='rank'>
+<image src='../image/rank.png'></image>
+  <text class='title'>您的当前排名为</text>
+  <text class='num'>2046</text>
+</view>

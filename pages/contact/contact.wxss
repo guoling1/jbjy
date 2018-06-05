@@ -1,0 +1,60 @@
+/* pages/contact/contact.wxss */
+.map{
+  background: #fff;
+  padding: 32rpx 30rpx;
+}
+.map image{
+  width: 690rpx;
+  height: 475rpx;
+}
+.item{
+  padding: 16rpx 30rpx 0;
+  background: #fff;
+  border-bottom: 2rpx solid #e5e5e5;
+  height: 100rpx;
+}
+.item image{
+  margin: 8rpx 14rpx 0 0;
+  display: inline-block;
+  width: 15px;
+  height: 28rpx;
+  float: left;
+}
+.item text{
+  display: block;
+}
+.title{
+  font-size: 28rpx;
+}
+.des{
+  font-size: 24rpx;
+  margin-left: 43rpx;
+  color: #666;
+}
+.bottom{
+  background: #fff;
+  padding: 92rpx 0 75rpx;
+  display: flex;
+  justify-content: space-around;
+}
+.bottom .code{
+  width: 230rpx;
+  background: #f6f6f6;
+  box-shadow:0rpx 0rpx 15rpx #f6f6f6;
+}
+.code image{
+  margin: 22rpx auto;
+  width: 168rpx;
+  height: 168rpx;
+}
+.code text{
+  display: block;
+  font-size: 24rpx;
+  text-align: center;
+}
+.code .des{
+  font-size: 18rpx;
+  color: #999;
+  margin-bottom: 26rpx;
+  margin-left: 0;
+}

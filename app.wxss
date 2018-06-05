@@ -1,0 +1,24 @@
+/**app.wxss**/
+page {
+  background-color: #fff;
+  height: 100%;
+  font-size: 32rpx;
+  line-height: 1.6;
+}
+.container {
+  /* height: 100%; */
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  box-sizing: border-box;
+  background: #f9f9fa;
+} 
+image{
+  display: block;
+  width: 100%;
+  height: 100%;
+}
+.navigator-hover {
+  background:#fff;
+}
