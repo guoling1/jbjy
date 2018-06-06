@@ -1,12 +1,11 @@
-// pages/cases/cases.js
-var WxParse = require('../../wxParse/wxParse.js');
+// pages/newsDetail/newsDetail.js
 Page({
 
   /**
    * 页面的初始数据
    */
   data: {
-    case:''
+    news:''
   },
 
   /**
@@ -15,10 +14,12 @@ Page({
   onLoad: function (options) {
     var _this = this;
     wx.request({
-      url: 'https://jb.hdjincheng.cn/appbase/info.php?id=14',
+      url: 'https://jb.hdjincheng.cn/appbase/read.php?id='+options.id,
       success: function (res) {
-        res.data.text = res.data.text.replace(/http:\/\/localhost/, "https://jb.hdjincheng.cn")
-        WxParse.wxParse('case', 'html', res.data.text, _this);
+        if (res.data.code == "100") {
+          res.data.data.picurl = res.data.data.picurl.replace(/http:\/\/localhost/, "https://jb.hdjincheng.cn")
+          _this.setData({ news: res.data.data })
+        }
       }
     })
   },

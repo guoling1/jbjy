@@ -10,7 +10,7 @@
   </view>
   <view class='list'>
     <text>身份证号</text>
-    <input placeholder='请输入身份证号' type='idcard' name="idCard" value='{{idCard}}'></input>
+    <input placeholder='请输入身份证号' type='idcard' name="idcard" value='{{idcard}}'></input>
   </view>
   <view class='list'>
     <text>所在学校</text>

@@ -1,0 +1,8 @@
+<!--pages/newsDetail/newsDetail.wxml-->
+<image src='{{news.picurl}}'  mode="widthFix"></image>
+<view class='title'>{{news.title}}</view>
+<view class='middle'>
+  <text class='hits'>点击量：{{news.hits}}</text>
+  <text class='classname'>{{news.classname}}</text>
+</view>
+<view class='content'>{{news.content}}</view>

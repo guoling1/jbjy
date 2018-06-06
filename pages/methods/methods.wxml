@@ -5,5 +5,6 @@
 </view>
 <view class='content'>
   <view class='title'>创新方法介绍</view>
-  <text class='des'>    金榜教育是2001年原八中党委书记、校长于怀明教授创办，经潍城区教育局、民政局批准注册的正规教育培训机构。师资力量雄厚</text>
+  <import src="../../wxParse/wxParse.wxml"/>
+  <template is="wxParse" data="{{wxParseData:methods.nodes}}" />
 </view>

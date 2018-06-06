@@ -5,6 +5,9 @@ const app = getApp()
 Page({
   data: {
     swiperData: ['../image/swiper1.png', '../image/swiper2.png'],
+    news:[],
+    page:0,
+    more:false,
     vertical: false,
     autoplay: false,
     interval: 2000,
@@ -21,6 +24,33 @@ Page({
     })
   },
   onLoad: function () {
+    var _this = this;
+    // 获取轮播图图片
+    wx.request({
+      url: 'https://jb.hdjincheng.cn/appbase/ad.php?method=get',
+      success: function (res) {
+        if (res.data.code == "100") {
+          for(var i=0;i<res.data.data.length;i++){
+            res.data.data[i].picurl = res.data.data[i].picurl.replace(/http:\/\/localhost/,"https://jb.hdjincheng.cn")
+          }
+          _this.setData({ swiperData: res.data.data })
+        }
+      }
+    })
+
+    // 获取新闻资讯
+    wx.request({
+      url: 'https://jb.hdjincheng.cn/appbase/news.php?method=get',
+      success: function(res){
+        if(res.data.code=="100"){
+          for (var i = 0; i < res.data.data.length; i++) {
+            res.data.data[i].picurl = res.data.data[i].picurl.replace(/http:\/\/localhost/, "https://jb.hdjincheng.cn")
+          }
+          _this.setData({ news: res.data.data })
+        }
+      }
+    })
+
     if (app.globalData.userInfo) {
       this.setData({
         userInfo: app.globalData.userInfo,
@@ -47,6 +77,47 @@ Page({
         }
       })
     }
+  },
+  // 查看新闻详情
+  toDetail:function(e){
+    console.log(e)
+    wx.navigateTo({
+      url: '/pages/newsDetail/newsDetail?id=' + e.currentTarget.dataset.id,
+    })
+  },
+  /**
+   * 页面上拉触底事件的处理函数
+   */
+  onReachBottom: function () {
+    var that = this;
+    // 显示加载图标  
+    // wx.showLoading({
+    //   title: '玩命加载中',
+    // })
+    // 页数+1  
+    that.data.page = that.data.page + 1;
+    wx.request({
+      url: 'https://jb.hdjincheng.cn/appbase/news.php?method=get&page=' + that.data.page,
+      method: "GET",
+      // 请求头部  
+      header: {
+        'content-type': 'application/text'
+      },
+      success: function (res) {
+        // 回调函数  
+        var moment_list = that.data.news;
+
+        for (var i = 0; i < res.data.data.length; i++) {
+          moment_list.push(res.data.data[i]);
+        }
+        // 设置数据  
+        that.setData({
+          news: that.data.news
+        })
+        // 隐藏加载框  
+        wx.hideLoading();
+      }
+    })  
   },
   getUserInfo: function(e) {
     console.log(e)

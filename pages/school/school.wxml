@@ -6,7 +6,9 @@
 <view class='content'>
   <view class='title'>自招高中<text>（全国排名）</text></view>
   <view class='table ranking'>
-  <view class='table-hd'>
+  <import src="../../wxParse/wxParse.wxml"/>
+  <template is="wxParse" data="{{wxParseData:middleSchool.nodes}}" />
+  <!-- <view class='table-hd'>
     <view class='hd-item'>省份</view>
     <view class='hd-item' style="width:351rpx;flex:none;">就读学校</view>
     <view class='hd-item'>综合得分</view>
@@ -17,13 +19,15 @@
     <view class='table-col' style="width:351rpx;flex:none;">山东省莱芜市第一中学</view>
     <view class='table-col'>3318.8</view>
     <view class='table-col'>1</view>
-  </view>
+  </view> -->
 </view>
 </view>
 <view class='content'>
   <view class='title'>能降一本线的高校有哪些？</view>
   <view class='table drop'>
-    <view class='table-label'>面向全国降一本线的9所高校汇总</view>
+  <import src="../../wxParse/wxParse.wxml"/>
+  <template is="wxParse" data="{{wxParseData:university.nodes}}" />
+    <!-- <view class='table-label'>面向全国降一本线的9所高校汇总</view>
   <view class='table-hd'>
     <view class='hd-item' style="width:60rpx;flex:none;">序号</view>
     <view class='hd-item' style="width:60rpx;flex:none;">地区</view>
@@ -39,6 +43,6 @@
     <view class='table-col'>985/211</view>
     <view class='table-col'>全国</view>
     <view class='table-col' style="width:168rpx;flex:none;">降至一本线录取</view>
-  </view>
+  </view> -->
 </view>
 </view>

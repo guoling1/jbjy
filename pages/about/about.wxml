@@ -5,9 +5,12 @@
 </view>
 <view class='content'>
   <view class='title'>金榜教育Education</view>
-  <text class='des'>    金榜教育是2001年原八中党委书记、校长于怀明教授创办，经潍城区教育局、民政局批准注册的正规教育培训机构。师资力量雄厚</text>
+  <!-- <text class='des'>{{education}}</text> -->
+  <import src="../../wxParse/wxParse.wxml"/>
+  <template is="wxParse" data="{{wxParseData:education.nodes}}" />
 </view>
 <view class='content'>
-  <view class='title'>金榜教育Education</view>
-  <text class='des'>    金榜教育是2001年原八中党委书记、校长于怀明教授创办，经潍城区教育局、民政局批准注册的正规教育培训机构。师资力量雄厚</text>
+  <view class='title'>我们的服务Service</view>
+  <import src="../../wxParse/wxParse.wxml"/>
+  <template is="wxParse" data="{{wxParseData:service.nodes}}" />
 </view>

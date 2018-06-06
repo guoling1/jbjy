@@ -1,18 +1,19 @@
 <!--index.wxml-->
 <view class="container">
   <view class="page-section page-section-spacing swiper">
-      <swiper autoplay="{{autoplay}}" interval="{{interval}}" duration="{{duration}}" style='height:100%'>
-        <block wx:for="{{swiperData}}" wx:key="*this">
-          <swiper-item>
-            <view class="swiper-item {{item}}">
-               <image src='{{item}}'></image> 
+    <swiper autoplay="{{autoplay}}" interval="{{interval}}" duration="{{duration}}" style='height:100%'>
+      <block wx:for="{{swiperData}}" wx:key="*this">
+        <swiper-item>
+          <view class="swiper-item {{item}}">
+            <image src='{{item.picurl}}'></image>
+            <view class='swiperTitle'>{{item.title}}-
+              <text>{{item.info}}</text>
             </view>
-          </swiper-item>
-        </block>
-      </swiper>
-  </view>
-  <view class='swiperTitle'>夯实基础 扩展拔高-
-    <text>备战中考冲击中考高分</text>
+          </view>
+        </swiper-item>
+
+      </block>
+    </swiper>
   </view>
   <view class='nav'>
     <navigator url='/pages/about/about' class='navItem'>
@@ -49,45 +50,27 @@
     </navigator>
   </view>
   <view class='content'>
-    <view class='item'>
-      <text class='title'>金榜教育最新招生简章</text>
+    <view class='item' wx:for="{{news}}" wx:for-item="news" wx:key="news" bindtap='toDetail' data-id='{{news.id}}'>
+      <text class='title'>{{news.title}}</text>
       <view>
-        <image src='../image/content.png'></image>
+        <image src='{{news.picurl}}'></image>
         <view class='right'>
-          <text class='des'>金榜教育是2001年原八中党委书记、校长于怀明教授创办，经潍城区教育局、民政局批准注册的正规机……</text>
+          <text class='des'>{{news.description}}</text>
           <view class='bottom'>
             <image src='../image/contenticon.png'></image>
-          <text>资讯</text>
-          <text>关于我们</text>
+            <!-- <text>资讯</text> -->
+            <text>{{news.classname}}</text>
           </view>
-          
+
         </view>
-        
-      </view>
-    </view>
-     <view >
-      <text class='title'>金榜教育最新招生简章</text>
-      <view>
-        <image src='../image/content.png'></image>
-        <view class='right'>
-          <text class='des'>金榜教育是2001年原八中党委书记、校长于怀明教授创办，经潍城区教育局、民政局批准注册的正规机……</text>
-          <view class='bottom'>
-            <image src='../image/contenticon.png'></image>
-          <text>资讯</text>
-          <text>关于我们</text>
-          </view>
-          
-        </view>
-        
+
       </view>
     </view>
   </view>
+  
   <view class='footer'>
     <navigator url='/pages/regist/regist'>实名注册</navigator>
     <navigator url='/pages/contact/contact'>联系我们</navigator>
-    
+
   </view>
 </view>
-
-
-

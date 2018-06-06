@@ -4,7 +4,9 @@
 <view class='title'>专利知识 <text>/ Patent knowledge</text></view>
 </view>
 <view class='table'>
-  <view class='table-hd'>
+  <import src="../../wxParse/wxParse.wxml"/>
+  <template is="wxParse" data="{{wxParseData:patent.nodes}}" />
+  <!-- <view class='table-hd'>
     <view class='hd-item'>种类</view>
     <view class='hd-item' style='width:352rpx;flex:none;'>专利说明</view>
     <view class='hd-item' style='width:60rpx;flex:none;'>难度</view>
@@ -27,7 +29,7 @@
     <view class='table-col' style='width:352rpx;flex:none;'>是指对产品的形状、构造或者其结合所提出的适于食用的新的技术方案</view>
     <view class='table-col' style='width:60rpx;flex:none;'>中</view>
     <view class='table-col'>6-10个月</view>
-  </view>
+  </view> -->
 </view>
 <view class='img'>
   <image src='../image/knowbottom.png'></image>

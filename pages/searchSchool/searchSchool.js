@@ -6,14 +6,14 @@ Page({
    */
   data: {
     date:'2018',
-    array: ['美国', '中国', '巴西', '日本'],
-    index:'',
+    array: ['请选择','文科', '理科'],
+    topicClass:'请选择',
     score:''
   },
   bindPickerChange: function (e) {
-    console.log('picker发送选择改变，携带值为', e.detail.value)
+    console.log('picker发送选择改变，携带值为', this.data.array)
     this.setData({
-      index: e.detail.value
+      topicClass: this.data.array[e.detail.value]
     })
   },
   bindDateChange: function (e) {
@@ -24,6 +24,9 @@ Page({
   },
   search:function(e){
     console.log(e)
+    wx.navigateTo({
+      url: '/pages/searchSchoolResult/searchSchoolResult?topicClass='+this.data.topicClass+'&nianfen='+this.data.date+'&fenshu'+this.data.score,
+    })
   },
   /**
    * 生命周期函数--监听页面加载

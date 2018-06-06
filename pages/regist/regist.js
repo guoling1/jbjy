@@ -7,36 +7,38 @@ Page({
   data: {
     name:'',
     phone:'',
-    idCard:'',
+    idcard:'',
     school:''
   },
   formSubmit:function(e){
     var that = this;
-    wx.showModal({
-      showCancel: false,
-      title: '提示',
-      content: '信息登记成功',
-      success: function () {
-        that.setData({
-          name: '',
-          phone: '',
-          idCard: '',
-          school: ''
-        })
-      }
-    })
-    wx.showToast({
-      title: '注册失败',
-      icon: 'loading',
-      duration: 2000
-    })
     var formData = e.detail.value
+    console.log(1)
     wx.request({
-      url: '/aa',
+      url: 'https://jb.hdjincheng.cn/appbase/reg.php?method=save',
       data:formData,
-      method:'post',
-      success:function(){
-
+      success:function(res){
+        if(res.data.code=="100"){
+          wx.showModal({
+            showCancel: false,
+            title: '提示',
+            content: '注册成功',
+            success: function () {
+              that.setData({
+                name: '',
+                phone: '',
+                idcard: '',
+                school: ''
+              })
+            }
+          })
+        }else{
+          wx.showToast({
+            title: '注册失败',
+            icon: 'loading',
+            duration: 2000
+          })
+        }
       }
     })
   },

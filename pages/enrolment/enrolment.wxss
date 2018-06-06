@@ -42,7 +42,7 @@
   margin:0 auto;
   width: 52rpx;
   height: 4rpx;
-  background: #f2c512;
+  background: #f2c512 ;
 }
 .content .active{
   color: #333;

@@ -12,7 +12,8 @@
     "pages/searchSchool/searchSchool",
     "pages/searchSchoolResult/searchSchoolResult",
     "pages/methods/methods",
-    "pages/searchRank/searchRank"
+    "pages/searchRank/searchRank",
+    "pages/newsDetail/newsDetail"
   ],
   "window":{
     "backgroundTextStyle":"light",

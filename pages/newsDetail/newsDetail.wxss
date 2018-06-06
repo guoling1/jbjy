@@ -1,0 +1,26 @@
+/* pages/newsDetail/newsDetail.wxss */
+image{
+  margin:0 auto;
+  width: 700rpx;
+  height: auto;
+}
+.title{
+  margin: 0 30rpx;
+  text-align: center;
+  font-weight: bold;
+}
+.middle{
+  margin: 0 30rpx;
+  text-align: right;
+}
+.classname,.hits{
+  font-size: 24rpx;
+  color: #666;
+}
+.hits{
+  margin-right: 30rpx;
+}
+.content{
+  margin: 0 30rpx;
+  font-size: 28rpx;
+}
