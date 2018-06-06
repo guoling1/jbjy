@@ -24,9 +24,20 @@ Page({
   },
   search:function(e){
     console.log(e)
-    wx.navigateTo({
-      url: '/pages/searchSchoolResult/searchSchoolResult?topicClass='+this.data.topicClass+'&nianfen='+this.data.date+'&fenshu'+this.data.score,
+    var flag = true;
+  if(e.detail.value.score==""||e.detail.value.topicClass=="请选择"){
+    wx.showToast({
+      title: '请填写完整信息',
+      icon: 'loading',
+      duration: 1000
     })
+  }else{
+    var num = this.data.topicClass=="文科"?1:2
+    wx.navigateTo({
+      url: '/pages/searchSchoolResult/searchSchoolResult?topicClass=' + num + '&nianfen=' + e.detail.value.date + '&fenshu=' + e.detail.value.score,
+    })
+  }
+    
   },
   /**
    * 生命周期函数--监听页面加载

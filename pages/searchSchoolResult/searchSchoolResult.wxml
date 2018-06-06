@@ -9,6 +9,7 @@
 </view>
 <view class='main'>
   <view class='title'>冲高学校</view>
+  
   <view class='table ranking'>
     <view class='table-hd'>
       <view class='hd-item'>学校</view>
@@ -17,10 +18,12 @@
       <view class='hd-item'>分数</view>
     </view>
     <view class='table-row'>
-      <view class='table-col'>清华大学</view>
-      <view class='table-col'>669</view>
-      <view class='table-col'>清华大学</view>
-      <view class='table-col'>669</view>
+      <view class='table-row' wx:for="{{underList}}" wx:for-item="underList"  wx:key="underList">
+      <view class='table-col'>{{underList[0].schoolname}}</view>
+      <view class='table-col'>{{underList[0].score}}</view>
+      <view class='table-col'>{{underList[1].schoolname}}</view>
+      <view class='table-col'>{{underList[1].schoolname}}</view>
+    </view>
     </view>
     <view class='table-row'>
       <view class='table-col'>上海交通大学</view>
@@ -31,7 +34,7 @@
   </view>
 </view>
 <view class='main'>
-  <view class='title'>冲高学校</view>
+  <view class='title'>保底学校</view>
   <view class='table ranking'>
     <view class='table-hd'>
       <view class='hd-item'>学校</view>
@@ -39,11 +42,11 @@
       <view class='hd-item'>学校</view>
       <view class='hd-item'>分数</view>
     </view>
-    <view class='table-row'>
-      <view class='table-col'>清华大学</view>
-      <view class='table-col'>669</view>
-      <view class='table-col'>清华大学</view>
-      <view class='table-col'>669</view>
+    <view class='table-row' wx:for="{{underList}}" wx:for-item="underList"  wx:key="underList">
+      <view class='table-col'>{{hyperList[0].schoolname}}</view>
+      <view class='table-col'>{{hyperList[0].score}}</view>
+      <view class='table-col'>{{hyperList[1].schoolname}}</view>
+      <view class='table-col'>{{hyperList[1].schoolname}}</view>
     </view>
     <view class='table-row'>
       <view class='table-col'>上海交通大学</view>

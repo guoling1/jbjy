@@ -1,10 +1,39 @@
 <!--pages/searchRank/searchRank.wxml-->
-<view class='search'>
+<!-- <view class='search'>
   <input class=''></input>
   <image src='../image/search.png'></image>
-</view>
-<view class='rank'>
+</view> -->
+<form bindsubmit='search'>
+  <view class="section">
+    <view class="section__title">类别</view>
+    <picker bindchange="bindPickerChange" name="topicClass" value="{{topicClass}}" range="{{array}}">
+      <view class="picker">
+        {{topicClass}}
+      </view>
+    </picker>
+    <!-- <input name="genre" placeholder='请选择类别'></input> -->
+  </view>
+  <view class="section">
+    <view class="section__title">年份</view>
+    <picker mode="date" value="{{date}}" name="date" fields="year" bindchange="bindDateChange">
+      <view class="picker">{{date}}年</view>
+    </picker>
+    <!-- <input name="year" type='' placeholder='2017年'></input> -->
+  </view>
+
+  <view class="section">
+    <view class="section__title">分数</view>
+    <input type='number' name="score" placeholder="请输入分数" value='{{score}}' />
+  </view>
+  <view class="btn-area">
+    <!-- <navigator url='../searchSchoolResult/searchSchoolResult'> -->
+    <button formType="submit">搜索</button>
+    <!-- </navigator> -->
+
+  </view>
+</form>
+<view class='rank' wx:if="{{isRanking}}">
 <image src='../image/rank.png'></image>
   <text class='title'>您的当前排名为</text>
-  <text class='num'>2046</text>
+  <text class='num'>{{ranking}}</text>
 </view>
