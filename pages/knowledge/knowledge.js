@@ -19,7 +19,7 @@ Page({
       url: 'https://jb.hdjincheng.cn/appbase/info.php?id=9',
       success: function (res) {
         res.data.text = res.data.text.replace(/http:\/\/localhost/, "https://jb.hdjincheng.cn")
-        WxParse.wxParse('patent', 'html', res.data.text, _this);
+        WxParse.wxParse('patent', 'html', res.data.text, _this,15);
       }
     })
   },

@@ -6,7 +6,7 @@
 <view class='content'>
   <view class='title'>金榜教育Education</view>
   <!-- <text class='des'>{{education}}</text> -->
-  <import src="../../wxParse/wxParse.wxml"/>
+   <import src="../../wxParse/wxParse.wxml"/> 
   <template is="wxParse" data="{{wxParseData:education.nodes}}" />
 </view>
 <view class='content'>

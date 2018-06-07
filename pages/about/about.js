@@ -20,7 +20,7 @@ Page({
       url: 'https://jb.hdjincheng.cn/appbase/info.php?id=2',
       success: function (res) {
         res.data.text = res.data.text.replace(/http:\/\/localhost/, "https://jb.hdjincheng.cn")
-        WxParse.wxParse('education', 'html', res.data.text, _this);
+        WxParse.wxParse('education', 'html', res.data.text, _this,15);
       }
     })
     // 我们的服务
@@ -28,7 +28,7 @@ Page({
       url: 'https://jb.hdjincheng.cn/appbase/info.php?id=3',
       success: function (res) {
         res.data.text = res.data.text.replace(/http:\/\/localhost/, "https://jb.hdjincheng.cn")
-        WxParse.wxParse('service', 'html', res.data.text, _this);
+        WxParse.wxParse('service', 'html', res.data.text, _this,10);
       }
     })
   },

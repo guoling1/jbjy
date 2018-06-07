@@ -18,7 +18,7 @@ Page({
       url: 'https://jb.hdjincheng.cn/appbase/info.php?id=14',
       success: function (res) {
         res.data.text = res.data.text.replace(/http:\/\/localhost/, "https://jb.hdjincheng.cn")
-        WxParse.wxParse('case', 'html', res.data.text, _this);
+        WxParse.wxParse('case', 'html', res.data.text, _this,15);
       }
     })
   },

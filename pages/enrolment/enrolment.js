@@ -25,7 +25,7 @@ Page({
       url: 'https://jb.hdjincheng.cn/appbase/info.php?id=5',
       success: function (res) {
         res.data.text = res.data.text.replace(/http:\/\/localhost/, "https://jb.hdjincheng.cn")
-        WxParse.wxParse('introduce', 'html', res.data.text, _this);
+        WxParse.wxParse('introduce', 'html', res.data.text, _this,15);
       }
     })
     // 好处
@@ -33,7 +33,7 @@ Page({
       url: 'https://jb.hdjincheng.cn/appbase/info.php?id=6',
       success: function (res) {
         res.data.text = res.data.text.replace(/http:\/\/localhost/, "https://jb.hdjincheng.cn")
-        WxParse.wxParse('benefit', 'html', res.data.text, _this);
+        WxParse.wxParse('benefit', 'html', res.data.text, _this,15);
       }
     })
     // 条件
@@ -41,7 +41,7 @@ Page({
       url: 'https://jb.hdjincheng.cn/appbase/info.php?id=7',
       success: function (res) {
         res.data.text = res.data.text.replace(/http:\/\/localhost/, "https://jb.hdjincheng.cn")
-        WxParse.wxParse('condition', 'html', res.data.text, _this);
+        WxParse.wxParse('condition', 'html', res.data.text, _this,15);
       }
     })
   },

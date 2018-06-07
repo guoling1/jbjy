@@ -20,7 +20,7 @@ Page({
       url: 'https://jb.hdjincheng.cn/appbase/info.php?id=11',
       success: function (res) {
         res.data.text = res.data.text.replace(/http:\/\/localhost/, "https://jb.hdjincheng.cn")
-        WxParse.wxParse('middleSchool', 'html', res.data.text, _this);
+        WxParse.wxParse('middleSchool', 'html', res.data.text, _this,15);
       }
     })
     // 降分学校
@@ -28,7 +28,7 @@ Page({
       url: 'https://jb.hdjincheng.cn/appbase/info.php?id=12',
       success: function (res) {
         res.data.text = res.data.text.replace(/http:\/\/localhost/, "https://jb.hdjincheng.cn")
-        WxParse.wxParse('university', 'html', res.data.text, _this);
+        WxParse.wxParse('university', 'html', res.data.text, _this,15);
       }
     })
   },
