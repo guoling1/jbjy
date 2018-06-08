@@ -1,6 +1,6 @@
 <!--pages/about/about.wxml-->
 <view class='head'>
-<image src='../image/about.png'></image>
+<image src='https://jb.hdjincheng.cn/image/about.png'></image>
 <view class='title'>关于我们 <text>/ About Us</text></view>
 </view>
 <view class='content'>

@@ -15,7 +15,7 @@
   </view>
   <view class="section">
     <view class="section__title">年份</view>
-    <picker mode="date" value="{{date}}" name="date" fields="year" bindchange="bindDateChange">
+    <picker mode="date" value="{{date}}" end="2018" name="date" fields="year" bindchange="bindDateChange">
       <view class="picker">{{date}}年</view>
     </picker>
     <!-- <input name="year" type='' placeholder='2017年'></input> -->

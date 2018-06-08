@@ -10,7 +10,7 @@ Page({
     topicClass: '请选择',
     score: '',
     ranking:'',
-    isRanking:false
+    isRanking:true
   },
   bindPickerChange: function (e) {
     console.log('picker发送选择改变，携带值为', this.data.array)
@@ -25,7 +25,7 @@ Page({
     })
   },
   search: function (e) {
-    console.log(e)
+    var _this = this;
     var flag = true;
     if (e.detail.value.score == "" || e.detail.value.topicClass == "请选择") {
       wx.showToast({
@@ -34,72 +34,17 @@ Page({
         duration: 1000
       })
     } else {
-      var num = this.data.topicClass == "文科" ? 1 : 2
       wx.request({
-        url: 'https://jb.hdjincheng.cn/appbase/school.php?method=ranking&topicClass=' + topicClass + '&nianfen=' + options.nianfen + '&fenshu=' + options.fenshu,
+        url: 'https://jb.hdjincheng.cn/appbase/school.php?method=ranking&topicClass=' + e.detail.value.topicClass + '&nianfen=' + e.detail.value.date + '&fenshu=' + e.detail.value.score,
         success: function (res) {
-          this.setData({
+          
+          _this.setData({
             ranking: res.data.ranking,
-            isRanking:true
+            isRanking:false
           })
         }
       })
     }
 
   },
-  /**
-   * 生命周期函数--监听页面加载
-   */
-  onLoad: function (options) {
-
-  },
-
-  /**
-   * 生命周期函数--监听页面初次渲染完成
-   */
-  onReady: function () {
-
-  },
-
-  /**
-   * 生命周期函数--监听页面显示
-   */
-  onShow: function () {
-
-  },
-
-  /**
-   * 生命周期函数--监听页面隐藏
-   */
-  onHide: function () {
-
-  },
-
-  /**
-   * 生命周期函数--监听页面卸载
-   */
-  onUnload: function () {
-
-  },
-
-  /**
-   * 页面相关事件处理函数--监听用户下拉动作
-   */
-  onPullDownRefresh: function () {
-
-  },
-
-  /**
-   * 页面上拉触底事件的处理函数
-   */
-  onReachBottom: function () {
-
-  },
-
-  /**
-   * 用户点击右上角分享
-   */
-  onShareAppMessage: function () {
-
-  }
 })

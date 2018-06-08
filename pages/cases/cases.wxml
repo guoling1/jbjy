@@ -1,6 +1,6 @@
 <!--pages/cases/cases.wxml-->
 <view class='head'>
-<image src='../image/cases.png'></image>
+<image src='https://jb.hdjincheng.cn/image/cases.png'></image>
 <view class='title'>成功案例 <text>/ Successful cases</text></view>
 </view>
  <view class='table'>

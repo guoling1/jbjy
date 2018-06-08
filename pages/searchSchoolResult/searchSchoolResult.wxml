@@ -4,7 +4,7 @@
   <view class='content'>
     <image src='../image/searchResult.png'></image>
     <text class='top'>您的当前排名为</text>
-    <text class='bottom'>2046</text>
+    <text class='bottom'>{{ranking}}</text>
   </view>
 </view>
 <view class='main'>
@@ -17,19 +17,12 @@
       <view class='hd-item'>学校</view>
       <view class='hd-item'>分数</view>
     </view>
-    <view class='table-row'>
-      <view class='table-row' wx:for="{{underList}}" wx:for-item="underList"  wx:key="underList">
-      <view class='table-col'>{{underList[0].schoolname}}</view>
-      <view class='table-col'>{{underList[0].score}}</view>
-      <view class='table-col'>{{underList[1].schoolname}}</view>
-      <view class='table-col'>{{underList[1].schoolname}}</view>
-    </view>
-    </view>
-    <view class='table-row'>
-      <view class='table-col'>上海交通大学</view>
-      <view class='table-col'>669</view>
-      <view class='table-col'>上海交通大学</view>
-      <view class='table-col'>669</view>
+    
+    <view class='table-row' wx:for="{{hyperList}}" wx:for-item="hyperList"  wx:key="hyperList">
+      <view class='table-col'>{{hyperList[0].schoolname}}</view>
+      <view class='table-col'>{{hyperList[0].score}}</view>
+      <view class='table-col'>{{hyperList[1].schoolname}}</view>
+      <view class='table-col'>{{hyperList[1].score}}</view>
     </view>
   </view>
 </view>
@@ -43,16 +36,10 @@
       <view class='hd-item'>分数</view>
     </view>
     <view class='table-row' wx:for="{{underList}}" wx:for-item="underList"  wx:key="underList">
-      <view class='table-col'>{{hyperList[0].schoolname}}</view>
-      <view class='table-col'>{{hyperList[0].score}}</view>
-      <view class='table-col'>{{hyperList[1].schoolname}}</view>
-      <view class='table-col'>{{hyperList[1].schoolname}}</view>
-    </view>
-    <view class='table-row'>
-      <view class='table-col'>上海交通大学</view>
-      <view class='table-col'>669</view>
-      <view class='table-col'>上海交通大学</view>
-      <view class='table-col'>669</view>
+      <view class='table-col'>{{underList[0].schoolname}}</view>
+      <view class='table-col'>{{underList[0].score}}</view>
+      <view class='table-col'>{{underList[1].schoolname}}</view>
+      <view class='table-col'>{{underList[1].score}}</view>
     </view>
   </view>
 </view>

@@ -1,6 +1,6 @@
 <!--pages/school/school.wxml-->
 <view class='head'>
-<image src='../image/school.png'></image>
+<image src='https://jb.hdjincheng.cn/image/school.png'></image>
 <view class='title'>自招学校 <text>/ For the school</text></view>
 </view>
 <view class='content'>

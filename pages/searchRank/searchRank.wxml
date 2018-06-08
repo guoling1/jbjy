@@ -32,7 +32,7 @@
 
   </view>
 </form>
-<view class='rank' wx:if="{{isRanking}}">
+<view class='rank' hidden='{{isRanking}}'>
 <image src='../image/rank.png'></image>
   <text class='title'>您的当前排名为</text>
   <text class='num'>{{ranking}}</text>

@@ -1,6 +1,6 @@
 <!--pages/enrolment/enrolment.wxml-->
 <view class='head'>
-  <image src='../image/enrolment.png'></image>
+  <image src='https://jb.hdjincheng.cn/image/enrolment.png'></image>
   <view class='title'>自主招生
     <text>/ Autonomous enrolment</text>
   </view>
